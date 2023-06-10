@@ -1,0 +1,331 @@
+question 1
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// Using anonymous function
+const printOddNumbers = function (arr) {
+  arr.forEach(function (num) {
+    if (num % 2 !== 0) {
+      console.log(num);
+    }
+  });
+};
+
+printOddNumbers(arr);
+
+// Using IIFE
+(function (arr) {
+  arr.forEach(function (num) {
+    if (num % 2 !== 0) {
+      console.log(num);
+    }
+  });
+})(arr);
+question 2
+
+const arr = ["hello", "world", "javascript", "programming"];
+
+// Using anonymous function
+const convertToTitleCaps = function (arr) {
+  const titleCapsArr = arr.map(function (str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+  console.log(titleCapsArr);
+};
+
+convertToTitleCaps(arr);
+
+// Using IIFE
+(function (arr) {
+  const titleCapsArr = arr.map(function (str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+  console.log(titleCapsArr);
+})(arr);
+
+question 3
+const arr = [1, 2, 3, 4, 5];
+
+// Using anonymous function
+const sumArray = function (arr) {
+  let sum = 0;
+  arr.forEach(function (num) {
+    sum += num;
+  });
+  console.log(sum);
+};
+
+sumArray(arr);
+
+// Using IIFE
+(function (arr) {
+  let sum = 0;
+  arr.forEach(function (num) {
+    sum += num;
+  });
+  console.log(sum);
+})(arr);
+
+question 4
+
+const arr = [2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Using anonymous function
+const getPrimeNumbers = function (arr) {
+  const primeArr = arr.filter(function (num) {
+    if (num < 2) {
+      return false;
+    }
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  });
+  console.log(primeArr);
+};
+
+getPrimeNumbers(arr);
+
+// Using IIFE
+(function (arr) {
+  const primeArr = arr.filter(function (num) {
+    if (num < 2) {
+      return false;
+    }
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  });
+  console.log(primeArr);
+})(arr);
+
+question 5
+
+const arr = ["level", "hello", "madam", "world", "racecar"];
+
+// Using anonymous function
+const getPalindromes = function (arr) {
+  const palindromeArr = arr.filter(function (str) {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+  });
+  console.log(palindromeArr);
+};
+
+getPalindromes(arr);
+
+// Using IIFE
+(function (arr) {
+  const palindromeArr = arr.filter(function (str) {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+  });
+  console.log(palindromeArr);
+})(arr);
+
+question 6
+
+const arr1 = [1, 3, 5];
+const arr2 = [2, 4, 6];
+
+// Using anonymous function
+const findMedian = function (arr1, arr2) {
+  const combinedArr = arr1.concat(arr2);
+  const sortedArr = combinedArr.sort(function (a, b) {
+    return a - b;
+  });
+  const length = sortedArr.length;
+  if (length % 2 === 0) {
+    const mid = length / 2;
+    const median = (sortedArr[mid - 1] + sortedArr[mid]) / 2;
+    console.log(median);
+  } else {
+    const mid = Math.floor(length / 2);
+    const median = sortedArr[mid];
+    console.log(median);
+  }
+};
+
+findMedian(arr1, arr2);
+
+// Using IIFE
+(function (arr1, arr2) {
+  const combinedArr = arr1.concat(arr2);
+  const sortedArr = combinedArr.sort(function (a, b) {
+    return a - b;
+  });
+  const length = sortedArr.length;
+  if (length % 2 === 0) {
+    const mid = length / 2;
+    const median = (sortedArr[mid - 1] + sortedArr[mid]) / 2;
+    console.log(median);
+  } else {
+    const mid = Math.floor(length / 2);
+    const median = sortedArr[mid];
+    console.log(median);
+  }
+})(arr1, arr2);
+
+
+question 7
+
+const arr = [1, 2, 3, 2, 4, 5, 1, 6, 3];
+
+// Using anonymous function
+const removeDuplicates = function (arr) {
+  const uniqueArr = arr.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+  
+  question 8
+  
+  const arr = [1, 2, 3, 4, 5];
+const k = 2;
+
+// Using anonymous function
+const rotateArray = function (arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log(arr);
+};
+
+rotateArray(arr, k);
+
+// Using IIFE
+(function (arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log(arr);
+})(arr, k);
+
+  
+  
+  
+  
+  console.log(uniqueArr);
+};
+
+removeDuplicates(arr);
+
+// Using IIFE
+(function (arr) {
+  const uniqueArr = arr.filter(function (value, index, self) {
+    return self.indexOf(value) === index;
+  });
+  console.log(uniqueArr);
+})(arr);
+
+question 8
+
+const arr = [1, 2, 3, 4, 5];
+const k = 2;
+
+// Using anonymous function
+const rotateArray = function (arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log(arr);
+};
+
+rotateArray(arr, k);
+
+// Using IIFE
+(function (arr, k) {
+  for (let i = 0; i < k; i++) {
+    arr.unshift(arr.pop());
+  }
+  console.log(arr);
+})(arr, k);
+
+
+(2):Do the below programs in arrow functions.
+
+question 1
+
+const printOddNumbers = (arr) => {
+  arr.forEach((num) => {
+    if (num % 2 !== 0) {
+      console.log(num);
+    }
+  });
+};
+
+// Usage
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+printOddNumbers(numbers);
+
+
+question 2
+
+const convertToTitleCaps = (arr) => {
+  return arr.map((str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  });
+};
+
+// Usage
+const strings = ["hello", "world", "example"];
+const titleCaps = convertToTitleCaps(strings);
+console.log(titleCaps);
+
+question 3
+
+const sumNumbers = (arr) => {
+  return arr.reduce((acc, num) => acc + num, 0);
+};
+
+// Usage
+const numbers = [1, 2, 3, 4, 5];
+const sum = sumNumbers(numbers);
+console.log(sum);
+
+question 4
+
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const getPrimeNumbers = (arr) => {
+  return arr.filter((num) => isPrime(num));
+};
+
+// Usage
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const primeNumbers = getPrimeNumbers(numbers);
+console.log(primeNumbers);
+
+question 5
+
+const isPalindrome = (str) => {
+  const reversed = str.split("").reverse().join("");
+  return str === reversed;
+};
+
+const getPalindromes = (arr) => {
+  return arr.filter((str) => isPalindrome(str));
+};
+
+// Usage
+const strings = ["level", "hello", "radar", "world", "madam"];
+const palindromes = getPalindromes(strings);
+console.log(palindromes);
+
+
+
